@@ -111,10 +111,17 @@ optimum-cli export openvino --model runwayml/stable-diffusion-v1-5 --task text-t
 
 **Simple text-to-image generation:**
 ```bash
+cd c:\working\proart\stable-diffusion-1.5
 python enhanced_performance_sd.py --prompt "A beautiful landscape with mountains and lake, digital art"
 ```
 
-**Performance benchmarking:**
+**Performance benchmarking (full example):**
+```bash
+cd c:\working\proart\stable-diffusion-1.5
+python enhanced_performance_sd.py --benchmark --device GPU --model-path "./models/stable-diffusion-v1-5_ov" --benchmark-runs 3 --width 512 --height 512 --steps 25
+```
+
+**Quick benchmarking:**
 ```bash
 python enhanced_performance_sd.py --benchmark --benchmark-runs 3 --warmup-runs 1
 ```
@@ -145,10 +152,17 @@ All options for `enhanced_performance_sd.py`:
 
 **Simple text-to-image generation:**
 ```bash
+cd c:\working\proart\stable-diffusion-1.5
 python enhanced_performance_sd.py --prompt "A beautiful mountain landscape"
 ```
 
-**Performance benchmarking:**
+**Full performance benchmarking example:**
+```bash
+cd c:\working\proart\stable-diffusion-1.5
+python enhanced_performance_sd.py --benchmark --device GPU --model-path "./models/stable-diffusion-v1-5_ov" --benchmark-runs 3 --width 512 --height 512 --steps 25
+```
+
+**Quick benchmarking:**
 ```bash
 python enhanced_performance_sd.py --benchmark --benchmark-runs 5 --warmup-runs 2
 ```
