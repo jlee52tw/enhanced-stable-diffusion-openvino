@@ -1,0 +1,32 @@
+# Requirements for Enhanced Stable Diffusion with OpenVINO GenAI
+# Core OpenVINO and GenAI packages
+openvino>=2025.0
+openvino_genai>=2025.0
+openvino_tokenizers>=2025.0
+
+# Optimum for model conversion
+optimum[openvino]>=1.14.0
+optimum-intel
+
+# Diffusion models and transformers
+diffusers>=0.30.0
+transformers>=4.25.0
+accelerate>=0.20.0
+
+# PyTorch (CPU version for model loading)
+torch>=2.1
+torchvision
+
+# Image processing and utilities
+Pillow>=9.0.0
+numpy>=1.21.0
+requests>=2.28.0
+tqdm>=4.64.0
+
+# Web interface
+gradio>=4.19
+
+# Optional: for better performance
+safetensors>=0.3.0
+huggingface-hub>=0.9.1
+opencv-python
